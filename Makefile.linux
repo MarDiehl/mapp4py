@@ -1,7 +1,7 @@
 SHELL		=/bin/bash
 CC		  = mpicxx
 MAKEFILE=Makefile
-CFLAGS	=-pthread -std=c++11 -O3
+CFLAGS	=-pthread -std=c++11 -O3 -fpermissive
 
 INCLUDE_PY	=-I/home/sina/apps/python/include/python2.7
 LIB_PY		=-L/home/sina/apps/python/lib

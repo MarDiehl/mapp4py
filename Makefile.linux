@@ -1,24 +1,17 @@
 SHELL		=/bin/bash
-CC		=icpc 
-MAKEFILE	=Makefile
-CFLAGS		=-pthread -std=c++11 -O3
+CC		  = mpicxx
+MAKEFILE=Makefile
+CFLAGS	=-pthread -std=c++11 -O3
 
-
-INCLUDE_MPI	=
-LIB_MPI		=
-
-INCLUDE_MPI	=-I/opt/openmpi-intel/include
-LIB_MPI		=-L/opt/openmpi-intel/lib
 INCLUDE_PY	=-I/home/sina/apps/python/include/python2.7
 LIB_PY		=-L/home/sina/apps/python/lib
 INCLUDE_NP	=-I/home/sina/apps/python/lib/python2.7/site-packages/numpy/core/include
 LIB_NP		=-L/home/sina/apps/python/lib/python2.7/site-packages/numpy/core/lib
 
 
-INCLUDES	=$(INCLUDE_MPI) $(INCLUDE_PY) $(INCLUDE_NP)
-LIBS		=$(LIB_MPI) $(LIB_PY) $(LIB_NP)
-LDFLAGS		=-lnpymath -lmpi -lmpi_cxx -lopen-rte -lopen-pal -ldl -lnsl -lutil 
-#LDFLAGS		=-lnpymath -lpython2.7
+INCLUDES	=$(INCLUDE_PY) $(INCLUDE_NP)
+LIBS		=$(LIB_PY) $(LIB_NP)
+LDFLAGS		=-lnpymath -lopen-rte -lopen-pal -ldl -lnsl -lutil 
         
 SRC		=src/
 OBJ		=obj/

@@ -11,7 +11,7 @@ LIB_NP		=-L/home/sina/apps/python/lib/python2.7/site-packages/numpy/core/lib
 
 INCLUDES	=$(INCLUDE_PY) $(INCLUDE_NP)
 LIBS		=$(LIB_PY) $(LIB_NP)
-LDFLAGS		=-lnpymath -lopen-rte -lopen-pal -ldl -lnsl -lutil 
+LDFLAGS		=-lnpymath -ldl -lnsl -lutil 
         
 SRC		=src/
 OBJ		=obj/

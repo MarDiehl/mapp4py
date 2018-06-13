@@ -5,8 +5,8 @@ import mapp
 from mapp import dmd
 import time
 
-shutil.rmtree('dumps')
-shutil.mkdir('dumps')
+if os.path.exists('dumps'): shutil.rmtree('dumps')
+os.mkdir('dumps')
 
 boltz = 8.617330350e-5
 planck = 4.13566766225 * 0.1 * sqrt(1.60217656535/1.66053904020)
